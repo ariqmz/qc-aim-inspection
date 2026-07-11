@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#8C4824">
+<title>Daily Inspection Log — MMS AIM Project</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="brand-row">
+      <div class="brand-logo">MMS</div>
+      <div class="brand-text">
+        <div class="brand-title">QAQC DEPARTMENT</div>
+        <div class="brand-subtitle">Acid, Iron &amp; Metal Processing Plant</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FORM TITLE CARD -->
+  <div class="title-card">
+    <h1>Daily Inspection Log</h1>
+    <p class="subtitle">Record semua kegiatan inspeksi harian (Pass maupun Fail). Untuk finding yang perlu SOR, isi form SOR terpisah.</p>
+    <p class="required-note"><span class="req-mark">*</span> Field wajib diisi</p>
+  </div>
+
+  <!-- FORM -->
+  <form id="inspection-form" class="inspection-form" novalidate>
+
+    <!-- 1. Date -->
+    <div class="field-group">
+      <label for="date">Inspection Date <span class="req-mark">*</span></label>
+      <input type="date" id="date" name="date" required>
+    </div>
+
+    <!-- 2. Inspector Name -->
+    <div class="field-group">
+      <label for="inspector">Inspector Name <span class="req-mark">*</span></label>
+      <select id="inspector" name="inspector" required>
+        <option value="">-- Pilih Inspector --</option>
+      </select>
+    </div>
+
+    <!-- 3. Shift -->
+    <div class="field-group">
+      <label>Shift <span class="req-mark">*</span></label>
+      <div class="radio-row">
+        <label class="radio-item"><input type="radio" name="shift" value="Day Shift" required> Day Shift</label>
+        <label class="radio-item"><input type="radio" name="shift" value="Night Shift"> Night Shift</label>
+      </div>
+    </div>
+
+    <!-- 4. Plant Location -->
+    <div class="field-group">
+      <label for="plantLocation">Plant Location <span class="req-mark">*</span></label>
+      <select id="plantLocation" name="plantLocation" required>
+        <option value="">-- Pilih Plant Location --</option>
+      </select>
+    </div>
+
+    <!-- 5. WBS / Area -->
+    <div class="field-group">
+      <label for="wbs">WBS / Area Detail <span class="req-mark">*</span></label>
+      <input type="text" id="wbs" name="wbs" placeholder="Contoh: 3115 - Pyrite Ore Building" required>
+      <small class="hint">Format: <code>[WBS Number] - [Area Name]</code></small>
+    </div>
+
+    <!-- 6. Discipline -->
+    <div class="field-group">
+      <label for="discipline">Discipline Inspected <span class="req-mark">*</span></label>
+      <select id="discipline" name="discipline" required>
+        <option value="">-- Pilih Discipline --</option>
+      </select>
+    </div>
+
+    <!-- 7. Activity Type -->
+    <div class="field-group">
+      <label for="activityType">Activity Type / Scope <span class="req-mark">*</span></label>
+      <select id="activityType" name="activityType" required>
+        <option value="">-- Pilih Activity --</option>
+      </select>
+    </div>
+
+    <!-- 8. Reference Document -->
+    <div class="field-group">
+      <label for="referenceDoc">Reference Document (CWO / WO / WR) <span class="req-mark">*</span></label>
+      <input type="text" id="referenceDoc" name="referenceDoc" placeholder="Contoh: CWO-213, WO-256609, R0037285" required>
+      <small class="hint">Link inspeksi ke work order — penting untuk coverage tracking</small>
+    </div>
+
+    <!-- 9. Foreman/Supervisor -->
+    <div class="field-group">
+      <label for="foreman">Foreman / Supervisor Name <span class="req-mark">*</span></label>
+      <input type="text" id="foreman" name="foreman" placeholder="Nama supervisor/foreman lapangan" required>
+    </div>
+
+    <!-- 10. Contractor -->
+    <div class="field-group">
+      <label for="contractor">Contractor Company <span class="req-mark">*</span></label>
+      <select id="contractor" name="contractor" required>
+        <option value="">-- Pilih Contractor --</option>
+      </select>
+    </div>
+
+    <!-- 11. Inspection Result -->
+    <div class="field-group result-group">
+      <label>Inspection Result <span class="req-mark">*</span></label>
+      <div class="result-buttons">
+        <label class="result-btn result-pass">
+          <input type="radio" name="result" value="Pass" required>
+          <span class="result-icon">✓</span>
+          <span class="result-label">PASS</span>
+          <span class="result-desc">Semua sesuai spec</span>
+        </label>
+        <label class="result-btn result-fail">
+          <input type="radio" name="result" value="Fail">
+          <span class="result-icon">✗</span>
+          <span class="result-label">FAIL</span>
+          <span class="result-desc">Butuh follow-up (buat SOR terpisah)</span>
+        </label>
+      </div>
+      <small class="hint">Kalau Fail, submit form ini dulu, kemudian buat SOR di form terpisah.</small>
+    </div>
+
+    <!-- 12. Inspection Duration -->
+    <div class="field-group">
+      <label for="duration">Inspection Duration <span class="req-mark">*</span></label>
+      <select id="duration" name="duration" required>
+        <option value="">-- Pilih Durasi --</option>
+        <option value="< 10 minutes">&lt; 10 minutes</option>
+        <option value="10 - 30 minutes">10 – 30 minutes</option>
+        <option value="30 - 60 minutes">30 – 60 minutes</option>
+        <option value="> 60 minutes">&gt; 60 minutes</option>
+      </select>
+    </div>
+
+    <!-- 13. Remarks -->
+    <div class="field-group">
+      <label for="remarks">Additional Remarks <span class="optional-mark">(optional)</span></label>
+      <textarea id="remarks" name="remarks" rows="3" placeholder="Catatan tambahan, konteks, atau observasi umum..."></textarea>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="submit-row">
+      <button type="submit" id="submit-btn" class="btn-submit">
+        <span class="btn-text">Submit Inspection Log</span>
+        <span class="btn-loader" style="display:none;">Submitting...</span>
+      </button>
+      <button type="reset" class="btn-clear">Clear Form</button>
+    </div>
+
+  </form>
+
+  <!-- STATUS MESSAGES -->
+  <div id="status-success" class="status-msg status-success" style="display:none;">
+    <div class="status-icon">✓</div>
+    <div class="status-content">
+      <div class="status-title">Inspection Logged Successfully!</div>
+      <div class="status-body">Data sudah masuk ke sistem. Terima kasih!</div>
+      <button type="button" class="btn-secondary" onclick="resetForm()">Log Another Inspection</button>
+    </div>
+  </div>
+
+  <div id="status-error" class="status-msg status-error" style="display:none;">
+    <div class="status-icon">!</div>
+    <div class="status-content">
+      <div class="status-title">Gagal Submit</div>
+      <div class="status-body" id="error-detail">Cek koneksi internet dan coba lagi.</div>
+      <button type="button" class="btn-secondary" onclick="hideError()">Try Again</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="app-footer">
+    <p>MMS AIM Project 2026 — QAQC Department</p>
+    <p class="version">v1.0</p>
+  </footer>
+
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
