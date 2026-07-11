@@ -9,22 +9,15 @@
 // ==== APPS SCRIPT WEBHOOK URL ====
 // Ganti dengan URL deploy Apps Script lo (dari deploy setup)
 // Contoh: https://script.google.com/macros/s/AKfycb.../exec
-const APPS_SCRIPT_URL = "REPLACE_WITH_YOUR_APPS_SCRIPT_URL";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw0v9FZEfLdlqcnm8UTF--DGuO8ma1MHvFW2Ejfr4qJzhFSkJURGiafEbFmI0dPAHHBbQ/exec";
 
 
 // ==== MASTER LIST 1: INSPECTOR NAMES ====
 const INSPECTORS = [
-  "Aswin",
-  "Mhd Bahri",
-  "Khoirul Ikhsan",
-  "Freddy Simanjuntak",
-  "Dimas Subiantoro",
-  "Moch. Ikhwan",
   "Sainuddin Arga",
-  "Aden Shoif",
+  "Abdi Ihlas",
   "Teguh Wicaksana Putra",
-  "Lili Afrilyani",
-  "Intan Rahmani"
+  "Revy"
   // ✏️ Tambah/edit nama disini
 ];
 
@@ -34,25 +27,25 @@ const PLANT_LOCATIONS = [
   "Pyrite Plant",
   "Acid Plant",
   "Chloride Plant",
-  "Copper Cathode Plant (CCP)",
+  "Copper Cathode Plant",
   "Makarti Camp",
   "Labota Laydown",
-  "Storage Facility Area (SFA)",
-  "Waste Dump Facility (WDF)",
+  "Storage Facility Area",
+  "Waste Dump Facility",
   "General / Common Area"
 ];
 
 
 // ==== MASTER LIST 3: DISCIPLINES ====
 const DISCIPLINES = [
-  "Civil & Structure",
+  "Civil Infrastructure",
   "Mechanical",
-  "Piping & Fabrication",
-  "Electrical & Instrumentation",
-  "Painting & Insulation",
-  "Rigging & Scaffolding",
-  "EarthWork",
-  "Plant Maintenance",
+  "Piping Fabrication",
+  "Electrical Plumbing",
+  "Painting Insulation",
+  "RISCA",
+  "Earthwork",
+  "Plant",
   "Engineering"
 ];
 
@@ -83,13 +76,7 @@ const CONTRACTORS = [
   "AGI",
   "HAM",
   "RGD",
-  "WIM",
   "MJM",
   "BMS",
-  "IMJ",
-  "SJS",
-  "Superkrane",
-  "Transkon Jaya",
-  "GAS",
   "Other"
 ];
