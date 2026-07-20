@@ -17,9 +17,9 @@ const INSPECTORS = [
   "Sainuddin Arga",
   "Abdi Ihlas",
   "Teguh Wicaksana Putra",
-  "Revy Maghriza"
-  "Akhmad Mappuji"
-  "Soko Adjie"
+  "Revy Maghriza",
+  "Akhmad Mappuji",
+  "Soko Adjie",
   "Tommy Adrian"
   // ✏️ Tambah/edit nama disini
 ];
