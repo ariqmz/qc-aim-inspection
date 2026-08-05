@@ -10,9 +10,7 @@
 // Ganti dengan URL deploy Apps Script lo (dari deploy setup)
 // Contoh: https://script.google.com/macros/s/AKfycb.../exec
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw0v9FZEfLdlqcnm8UTF--DGuO8ma1MHvFW2Ejfr4qJzhFSkJURGiafEbFmI0dPAHHBbQ/exec";
-// ==== APPS SCRIPT WEBHOOK KHUSUS UPLOAD FOTO KE GOOGLE DRIVE ====
-// Backend terpisah (Code.gs) yang nyimpen foto ke Drive, dikelompokkan per tanggal & discipline
-const PHOTO_UPLOAD_URL = "https://script.google.com/macros/s/AKfycbwzz2AL5I49wQA86HwFZmqVhV8XCC4_RFcuFmgAdWUhTb_3k4N_V_L7Hqp_URWHiALi/exec";
+
 
 
 // ==== MASTER LIST 1: INSPECTOR NAMES ====
