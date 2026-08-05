@@ -67,18 +67,7 @@ async function handleSubmit(event) {
   btnLoader.style.display = "inline";
 
   try {
-    // ---- Upload foto ke Google Drive dulu (kalau ada foto dipilih) ----
-    const inspectionDateVal = document.getElementById("date").value;
-    const disciplineVal = document.getElementById("discipline").value;
-    const inspectorVal = document.getElementById("inspector").value;
-
-    if (selectedPhotos.length > 0) {
-      const photoResult = await uploadPhotosToDrive(inspectionDateVal, disciplineVal, inspectorVal);
-      if (!photoResult.success) {
-        throw new Error("Upload foto gagal: " + (photoResult.error || "unknown error"));
-      }
-    }
-
+    try {
     // Send POST to Apps Script webhook (form-urlencoded avoids preflight)
     const response = await fetch(APPS_SCRIPT_URL, {
       method: "POST",
@@ -96,8 +85,6 @@ async function handleSubmit(event) {
     if (result.trim().startsWith("OK") || result.includes("success")) {
       showSuccess();
       form.reset();
-      selectedPhotos = [];
-      renderPhotoGrid();
       // Restore default date after reset
       document.getElementById("date").value = new Date().toISOString().split("T")[0];
     } else {
