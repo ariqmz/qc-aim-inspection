@@ -144,7 +144,29 @@
       <label for="remarks">Additional Remarks <span class="optional-mark">(optional)</span></label>
       <textarea id="remarks" name="remarks" rows="3" placeholder="Catatan tambahan, konteks, atau observasi umum..."></textarea>
     </div>
+<!-- 14. Site Photos -->
+<div class="field-group">
+  <label for="photoInput">Site Photos <span class="req-mark">*</span></label>
+  <p style="font-size:0.82rem;color:#6b7280;margin:2px 0 8px;">
+    Ambil foto langsung dari kamera atau pilih dari galeri. Bisa lebih dari 1 foto.
+  </p>
 
+  <input
+    type="file"
+    id="photoInput"
+    accept="image/*"
+    capture="environment"
+    multiple
+    style="display:none"
+  />
+
+  <button type="button" id="btnTakePhoto" class="btn-submit" style="width:auto;padding:10px 16px;">
+    📷 Ambil / Pilih Foto
+  </button>
+  <span id="photoCount" style="font-size:0.85rem;margin-left:8px;"></span>
+
+  <div id="photoGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px;margin-top:12px;"></div>
+</div>
     <!-- SUBMIT -->
     <div class="submit-row">
       <button type="submit" id="submit-btn" class="btn-submit">
