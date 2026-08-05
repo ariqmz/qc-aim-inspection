@@ -66,7 +66,6 @@ async function handleSubmit(event) {
   btnText.style.display = "none";
   btnLoader.style.display = "inline";
 
-  try {
     try {
     // Send POST to Apps Script webhook (form-urlencoded avoids preflight)
     const response = await fetch(APPS_SCRIPT_URL, {
