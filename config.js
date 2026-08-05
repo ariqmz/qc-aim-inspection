@@ -11,8 +11,6 @@
 // Contoh: https://script.google.com/macros/s/AKfycb.../exec
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw0v9FZEfLdlqcnm8UTF--DGuO8ma1MHvFW2Ejfr4qJzhFSkJURGiafEbFmI0dPAHHBbQ/exec";
 
-
-
 // ==== MASTER LIST 1: INSPECTOR NAMES ====
 const INSPECTORS = [
   "Sainuddin Arga",
