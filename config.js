@@ -9,7 +9,7 @@
 // ==== APPS SCRIPT WEBHOOK URL ====
 // Ganti dengan URL deploy Apps Script lo (dari deploy setup)
 // Contoh: https://script.google.com/macros/s/AKfycb.../exec
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxC7iGWi-BsGJoAMK3ulEk1IA1OaoUgarPpkl3w_GGerxpDUtOJVA41zF2jr9APD7KXCw/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzJcFhI-XHxY32o03sxHqMsf8mys4wvEievxQR-t_5__Ye3EhxwpF89EQGY58R8-7EGlw/exec";
 
 // ==== MASTER LIST 1: INSPECTOR NAMES ====
 const INSPECTORS = [
