@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#8C4824">
 <title>Daily Inspection Log — MMS AIM Project</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="photo-upload.css?v=1">
 </head>
 <body>
 
@@ -145,6 +146,25 @@
       <textarea id="remarks" name="remarks" rows="3" placeholder="Catatan tambahan, konteks, atau observasi umum..."></textarea>
     </div>
 
+
+    <!-- 14. Photo Documentation -->
+    <div class="field-group photo-group">
+      <label for="photos">Photo Documentation <span class="optional-mark">(optional)</span></label>
+
+      <label for="photos" class="photo-drop">
+        <span class="photo-drop-icon">&#128247;</span>
+        <span class="photo-drop-title">Ambil Foto / Pilih dari Galeri</span>
+        <span class="photo-drop-sub">Foto otomatis dikompres sebelum dikirim</span>
+      </label>
+      <input type="file" id="photos" name="photos" accept="image/*" capture="environment" multiple hidden>
+
+      <div id="photo-count" class="photo-count">Belum ada foto (maksimum 6)</div>
+      <div id="photo-note" class="photo-note" style="display:none;"></div>
+      <div id="photo-preview" class="photo-preview"></div>
+
+      <small class="hint">Foto tersimpan otomatis di Drive dengan folder <code>[Tanggal] / [Discipline]</code></small>
+    </div>
+
     <!-- SUBMIT -->
     <div class="submit-row">
       <button type="submit" id="submit-btn" class="btn-submit">
@@ -161,7 +181,7 @@
     <div class="status-icon">✓</div>
     <div class="status-content">
       <div class="status-title">Inspection Logged Successfully!</div>
-      <div class="status-body">Data sudah masuk ke sistem. Terima kasih!</div>
+      <div class="status-body" id="success-detail">Data sudah masuk ke sistem. Terima kasih!</div>
       <button type="button" class="btn-secondary" onclick="resetForm()">Log Another Inspection</button>
     </div>
   </div>
@@ -178,12 +198,12 @@
   <!-- FOOTER -->
   <footer class="app-footer">
     <p>MMS AIM Project 2026 — QAQC Department</p>
-    <p class="version">v1.0</p>
+    <p class="version">v1.1 — photo upload</p>
   </footer>
 
 </div>
 
-<script src="config.js"></script>
-<script src="script.js"></script>
+<script src="config.js?v=2"></script>
+<script src="script.js?v=2"></script>
 </body>
 </html>
