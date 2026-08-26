@@ -1,0 +1,133 @@
+/* ====================================================================
+   Photo Upload — tambahan gaya untuk Daily Inspection Log
+   File terpisah agar styles.css yang sudah ada tidak perlu diubah.
+   Warna mengikuti theme-color aplikasi: #8C4824
+==================================================================== */
+
+.photo-group {
+  --brand: #8C4824;
+  --brand-soft: #F6EEE9;
+  --brand-line: #E0CBBE;
+}
+
+/* --- Tombol ambil foto --- */
+.photo-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  padding: 22px 16px;
+  border: 2px dashed var(--brand-line);
+  border-radius: 10px;
+  background: var(--brand-soft);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color .15s ease, background .15s ease;
+}
+.photo-drop:hover,
+.photo-drop:focus-within {
+  border-color: var(--brand);
+  background: #F1E4DC;
+}
+.photo-drop-icon {
+  font-size: 30px;
+  line-height: 1;
+}
+.photo-drop-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--brand);
+}
+.photo-drop-sub {
+  font-size: 12.5px;
+  color: #8A7A72;
+}
+
+/* --- Info jumlah & catatan --- */
+.photo-count {
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: #6F6058;
+}
+.photo-note {
+  margin-top: 8px;
+  padding: 8px 11px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  background: #EDF3ED;
+  border-left: 3px solid #2E7D32;
+  color: #24572A;
+}
+.photo-note.warn {
+  background: #FDF3E2;
+  border-left-color: #C9871B;
+  color: #7A5A12;
+}
+
+/* --- Pratinjau --- */
+.photo-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+.photo-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--brand-line);
+  background: #fff;
+}
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.photo-remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(20, 14, 10, .68);
+  color: #fff;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+.photo-remove:hover {
+  background: #B03A2E;
+}
+.photo-remove:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 1px;
+}
+.photo-size {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3px 6px;
+  font-size: 10.5px;
+  color: #fff;
+  background: linear-gradient(to top, rgba(20, 14, 10, .75), transparent);
+  text-align: right;
+}
+
+@media (max-width: 420px) {
+  .photo-preview {
+    grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-drop { transition: none; }
+}
