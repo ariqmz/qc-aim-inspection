@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#8C4824">
 <title>Daily Inspection Log — MMS AIM Project</title>
 <link rel="stylesheet" href="styles.css?v=2">
-<link rel="stylesheet" href="photo-upload.css?v=1">
+<link rel="stylesheet" href="photo-upload.css?v=2">
 </head>
 <body>
 
@@ -151,12 +151,18 @@
     <div class="field-group photo-group">
       <label for="photos">Photo Documentation <span class="optional-mark">(optional)</span></label>
 
-      <label for="photos" class="photo-drop">
-        <span class="photo-drop-icon">&#128247;</span>
-        <span class="photo-drop-title">Ambil Foto / Pilih dari Galeri</span>
-        <span class="photo-drop-sub">Foto otomatis dikompres sebelum dikirim</span>
-      </label>
-      <input type="file" id="photos" name="photos" accept="image/*" capture="environment" multiple hidden>
+      <div class="photo-actions">
+        <label for="photos-camera" class="photo-btn">
+          <span class="photo-btn-icon">&#128247;</span>
+          <span class="photo-btn-text">Ambil Foto</span>
+        </label>
+        <label for="photos-gallery" class="photo-btn">
+          <span class="photo-btn-icon">&#128444;</span>
+          <span class="photo-btn-text">Pilih dari Galeri</span>
+        </label>
+      </div>
+      <input type="file" id="photos-camera" accept="image/*" capture="environment" multiple hidden>
+      <input type="file" id="photos-gallery" accept="image/*" multiple hidden>
 
       <div id="photo-count" class="photo-count">Belum ada foto (maksimum 6)</div>
       <div id="photo-note" class="photo-note" style="display:none;"></div>
@@ -198,12 +204,12 @@
   <!-- FOOTER -->
   <footer class="app-footer">
     <p>MMS AIM Project 2026 — QAQC Department</p>
-    <p class="version">v1.1 — photo upload</p>
+    <p class="version">v1.2 — camera + gallery</p>
   </footer>
 
 </div>
 
 <script src="config.js?v=2"></script>
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>
