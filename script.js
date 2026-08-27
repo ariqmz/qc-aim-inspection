@@ -27,10 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("inspection-form").addEventListener("submit", handleSubmit);
 
-  const photoInput = document.getElementById("photos");
-  if (photoInput) {
-    photoInput.addEventListener("change", handlePhotoSelect);
-  }
+  // Dua input terpisah: kamera memakai capture, galeri tidak.
+  // Kalau digabung jadi satu input ber-capture, Android tidak menawarkan galeri.
+  ["photos-camera", "photos-gallery"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("change", handlePhotoSelect);
+  });
 });
 
 function populateSelect(elementId, options) {
