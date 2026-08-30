@@ -9,7 +9,7 @@
 // ==== APPS SCRIPT WEBHOOK URL ====
 // Ganti dengan URL deploy Apps Script lo (dari deploy setup)
 // Contoh: https://script.google.com/macros/s/AKfycb.../exec
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz0aMYjPk8jiayj-fmDet-cqoQDLOl-EaCtq8y1oYkFskG81POyExR06ZEJZ8T90Va7wA/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxq7juHpseTffXm_SBy2a2jUEVR2Yksb3lLfaXoX4Zw2RrljiDS5UMg-ntRG_Y5m_ikew/exec";
 
 // ==== MASTER LIST 1: INSPECTOR NAMES ====
 const INSPECTORS = [
@@ -18,7 +18,7 @@ const INSPECTORS = [
   "Teguh Wicaksana Putra",
   "Revy Maghriza",
   "Akhmad Mappuji",
-  "Soko Adjie",
+  "Soko Wahyu Adji",
   "Tommy Adrian"
   // ✏️ Tambah/edit nama disini
 ];
